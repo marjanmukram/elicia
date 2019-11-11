@@ -1,10 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
+import logo from "./logo.svg";
+import "./App.css";
+import { simpleAction } from "./actions/simpleAction";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
+      <pre>
+        {
+          JSON.stringify(props)
+        }
+      </pre>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,9 +25,21 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => props.simpleAction()}>Click me</button>
       </header>
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  ...state
+});
+
+const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(simpleAction())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
