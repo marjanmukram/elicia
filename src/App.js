@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import logo from "./logo.svg";
 import "./App.css";
 import { simpleAction } from "./actions/simpleAction";
+import MaterialUIButtons from "./materialUiButton";
 
 function App(props) {
   return (
@@ -17,6 +18,7 @@ function App(props) {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <MaterialUIButtons />
         <a
           className="App-link"
           href="https://reactjs.org"
