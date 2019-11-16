@@ -5,7 +5,7 @@ import "./App.css";
 import { simpleAction } from "./actions/simpleAction";
 import MaterialUIButtons from "./materialUiButton";
 import VectorIcon from "./components/atoms/VectorIcon";
-import { heart } from "./assets/vectorIcons";
+import { heart, pause, play } from "./assets/vectorIcons";
 
 function App(props) {
   return (
@@ -21,8 +21,8 @@ function App(props) {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <MaterialUIButtons />
-        <VectorIcon name={heart} /> <VectorIcon name={heart} />
-        <VectorIcon name={heart} />
+        <VectorIcon name={heart} /> <VectorIcon name={play} />
+        <VectorIcon name={pause} />
         <a
           className="App-link"
           href="https://reactjs.org"
