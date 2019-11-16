@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import configureStore from "./store";
+import './assets/fontello/css/animation.css';
+import './assets/fontello/css/fontello.css';
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
